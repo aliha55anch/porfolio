@@ -23,6 +23,9 @@ export function Contact() {
 
       const formData = new FormData(formRef.current)
       formData.append("access_key", WEB3FORMS_ACCESS_KEY)
+      formData.append("from_name", "Muhammad Ali Hassan Portfolio")
+      formData.append("from_email", Mydata.Email)
+      formData.append("reply_to", formData.get("email"))
 
       try {
          const response = await fetch("https://api.web3forms.com/submit", {
