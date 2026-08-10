@@ -37,7 +37,7 @@ export function Experience({ isPage = false }) {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", stiffness: 260, damping: 18, delay: stagger + 0.1 }}
             viewport={{ once: true }}
-            className="relative flex h-10 w-10 items-center justify-center rounded-full border bg-background shadow-lg transition-all duration-300 group-hover:scale-110"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full border bg-background shadow-lg transition-all duration-300 group-hover:scale-110 group-active:scale-110"
           >
             <span className={cn(
               "absolute inset-0 rounded-full opacity-40 blur-md transition-opacity duration-300",

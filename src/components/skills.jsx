@@ -36,12 +36,12 @@ const skillLogos = {
 }
 
 const categoryMeta = [
-  { key: "Languages", icon: Code2, gradient: "from-red-500/20 to-orange-500/10", accent: "text-red-600 dark:text-red-400", ring: "group-hover:ring-red-500/40" },
-  { key: "Frameworks", icon: Layers, gradient: "from-cyan-500/20 to-blue-500/10", accent: "text-cyan-700 dark:text-cyan-400", ring: "group-hover:ring-cyan-500/40" },
-  { key: "UI Libraries", icon: Palette, gradient: "from-purple-500/20 to-pink-500/10", accent: "text-purple-600 dark:text-purple-400", ring: "group-hover:ring-purple-500/40" },
-  { key: "Tools", icon: Wrench, gradient: "from-amber-500/20 to-yellow-500/10", accent: "text-amber-600 dark:text-amber-400", ring: "group-hover:ring-amber-500/40" },
-  { key: "Databases", icon: Database, gradient: "from-emerald-500/20 to-teal-500/10", accent: "text-emerald-600 dark:text-emerald-400", ring: "group-hover:ring-emerald-500/40" },
-  { key: "Others", icon: Sparkles, gradient: "from-pink-500/20 to-rose-500/10", accent: "text-pink-600 dark:text-pink-400", ring: "group-hover:ring-pink-500/40" },
+  { key: "Languages", icon: Code2, gradient: "from-red-500/20 to-orange-500/10", accent: "text-red-600 dark:text-red-400", ring: "group-hover:ring-red-500/40 group-active:ring-red-500/40" },
+  { key: "Frameworks", icon: Layers, gradient: "from-cyan-500/20 to-blue-500/10", accent: "text-cyan-700 dark:text-cyan-400", ring: "group-hover:ring-cyan-500/40 group-active:ring-cyan-500/40" },
+  { key: "UI Libraries", icon: Palette, gradient: "from-purple-500/20 to-pink-500/10", accent: "text-purple-600 dark:text-purple-400", ring: "group-hover:ring-purple-500/40 group-active:ring-purple-500/40" },
+  { key: "Tools", icon: Wrench, gradient: "from-amber-500/20 to-yellow-500/10", accent: "text-amber-600 dark:text-amber-400", ring: "group-hover:ring-amber-500/40 group-active:ring-amber-500/40" },
+  { key: "Databases", icon: Database, gradient: "from-emerald-500/20 to-teal-500/10", accent: "text-emerald-600 dark:text-emerald-400", ring: "group-hover:ring-emerald-500/40 group-active:ring-emerald-500/40" },
+  { key: "Others", icon: Sparkles, gradient: "from-pink-500/20 to-rose-500/10", accent: "text-pink-600 dark:text-pink-400", ring: "group-hover:ring-pink-500/40 group-active:ring-pink-500/40" },
 ]
 
 export function Skills() {
@@ -86,7 +86,7 @@ export function Skills() {
             viewport={{ once: true }}
           >
             <div className={`group relative h-full rounded-2xl bg-gradient-to-br ${cat.gradient} ring-1 ring-border/50 ${cat.ring} transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(229,9,20,0.15)] overflow-hidden`}>
-              <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl transition-opacity duration-500 group-hover:opacity-100 opacity-0" />
+              <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl transition-opacity duration-500 group-hover:opacity-100 group-active:opacity-100 opacity-0" />
               <div className="relative p-4 sm:p-6 space-y-4 sm:space-y-5">
                 <div className="flex items-center gap-3">
                   <div className={`flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-primary/10 ${cat.accent}`}>
@@ -111,10 +111,10 @@ export function Skills() {
                           className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-muted ring-1 ring-border"
                           style={{ "--skill-color": logo.color, "--skill-color-dark": logo.darkColor }}
                         >
-                          <logo.icon className="skill-logo-icon h-5 w-5 transition-transform duration-300 group-hover/tile:scale-125" />
-                          <span className="skill-logo-glow absolute inset-0 rounded-lg opacity-0 blur-md transition-opacity duration-300 group-hover/tile:opacity-30" />
+                          <logo.icon className="skill-logo-icon h-5 w-5 transition-transform duration-300 group-hover/tile:scale-125 group-active/tile:scale-125" />
+                          <span className="skill-logo-glow absolute inset-0 rounded-lg opacity-0 blur-md transition-opacity duration-300 group-hover/tile:opacity-30 group-active/tile:opacity-30" />
                         </span>
-                        <span className="text-[11px] font-semibold text-muted-foreground text-center leading-tight transition-colors duration-300 group-hover/tile:text-foreground">
+                        <span className="text-[11px] font-semibold text-muted-foreground text-center leading-tight transition-colors duration-300 group-hover/tile:text-foreground group-active/tile:text-foreground">
                           {skill}
                         </span>
                       </motion.div>

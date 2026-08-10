@@ -80,7 +80,7 @@ export function Certifications({ isPage = false }) {
                       src={cert.thumbnail_url}
                       alt={cert.title}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-110"
                     />
                   ) : null}
                   {/* Seal */}
@@ -91,7 +91,7 @@ export function Certifications({ isPage = false }) {
                     viewport={{ once: true }}
                     className="absolute top-3 left-3"
                   >
-                    <div className="w-11 h-11 rounded-full bg-black/40 border-2 border-dashed border-primary/60 flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105">
+                    <div className="w-11 h-11 rounded-full bg-black/40 border-2 border-dashed border-primary/60 flex items-center justify-center backdrop-blur-sm transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 group-active:rotate-6 group-active:scale-105">
                       <Award className="h-5 w-5 text-primary" />
                     </div>
                     <ShieldCheck className="absolute -bottom-1 -right-1 h-4 w-4 text-tuscan-sun bg-black/60 rounded-full p-0.5" />
@@ -117,7 +117,7 @@ export function Certifications({ isPage = false }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: (index % 4) * 0.1 + 0.35 }}
                     viewport={{ once: true }}
-                    className="font-serif text-lg font-bold leading-tight text-foreground line-clamp-2 group-hover:text-primary transition-colors duration-300"
+                    className="font-serif text-lg font-bold leading-tight text-foreground line-clamp-2 group-hover:text-primary group-active:text-primary transition-colors duration-300"
                   >
                     {cert.title}
                   </motion.h3>

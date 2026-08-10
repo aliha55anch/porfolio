@@ -125,9 +125,9 @@ export function Navbar() {
                     )}
                   >
                     {item.name}
-                    <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180 group-active:rotate-180" />
                     <span className={cn(
-                      "absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left",
+                      "absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left",
                       isActiveLink(item.href) ? "scale-x-100 bg-red-500" : ""
                     )} />
                   </Link>
@@ -163,7 +163,7 @@ export function Navbar() {
               >
                 {item.name}
                 <span className={cn(
-                  "absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left",
+                  "absolute -bottom-1 left-0 w-full h-0.5 bg-red-600 scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform origin-left",
                   isActiveLink(item.href) ? "scale-x-100 bg-red-500" : ""
                 )} />
               </Link>
@@ -228,7 +228,7 @@ export function Navbar() {
                           "relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border transition-colors duration-300",
                           active
                             ? "border-primary/40 bg-primary/15 text-primary"
-                            : "border-border/60 bg-background/50 text-muted-foreground group-hover:border-primary/30 group-hover:text-primary"
+                            : "border-border/60 bg-background/50 text-muted-foreground group-hover:border-primary/30 group-hover:text-primary group-active:border-primary/30 group-active:text-primary"
                         )}>
                           <Icon className="h-4 w-4" />
                         </span>
@@ -237,7 +237,7 @@ export function Navbar() {
                           "relative h-1.5 w-1.5 rounded-full transition-all duration-300",
                           active
                             ? "bg-primary"
-                            : "bg-muted-foreground/30 group-hover:bg-primary"
+                            : "bg-muted-foreground/30 group-hover:bg-primary group-active:bg-primary"
                         )} />
                       </Link>
                       {item.hasDropdown && (

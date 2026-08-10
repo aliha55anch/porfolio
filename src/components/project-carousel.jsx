@@ -32,7 +32,7 @@ export function ProjectCarousel({ images, name }) {
           <img
             src={images[currentIndex]}
             alt={`${name} - Image ${currentIndex + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-active:scale-110"
           />
         </motion.div>
       </AnimatePresence>

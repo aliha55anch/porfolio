@@ -86,7 +86,7 @@ export function Hero() {
           >
             <div className="relative group">
               {/* Red glow behind the card */}
-              <div className="absolute -inset-4 rounded-xl bg-red-600/10 blur-2xl group-hover:bg-red-600/20 transition-all duration-500" />
+              <div className="absolute -inset-4 rounded-xl bg-red-600/10 blur-2xl group-hover:bg-red-600/20 group-active:bg-red-600/20 transition-all duration-500" />
 
               <Card className="relative p-0 overflow-hidden border border-border bg-card/50 backdrop-blur-xl w-full max-w-4xl shadow-2xl">
                 <CardContent className="p-0">
@@ -234,7 +234,7 @@ export function Hero() {
           >
             <div className="relative group">
               {/* Red glow behind the card */}
-              <div className="absolute -inset-4 rounded-xl bg-red-600/10 blur-2xl group-hover:bg-red-600/20 transition-all duration-500" />
+              <div className="absolute -inset-4 rounded-xl bg-red-600/10 blur-2xl group-hover:bg-red-600/20 group-active:bg-red-600/20 transition-all duration-500" />
 
               <Card className="relative p-0 overflow-hidden border border-border bg-card/50 backdrop-blur-xl w-full max-w-4xl shadow-2xl">
                 <CardContent className="p-0">

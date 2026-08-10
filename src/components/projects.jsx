@@ -101,7 +101,7 @@ const projectImage = (project) => {
   if (project.image_url) {
     return <ProjectCarousel images={[project.image_url]} name={project.name} />
   }
-  return <Code2 className="h-16 w-16 text-muted-foreground/30 group-hover:text-primary/50 transition-colors" />
+  return <Code2 className="h-16 w-16 text-muted-foreground/30 group-hover:text-primary/50 group-active:text-primary/50 transition-colors" />
 }
 
 export function Projects({ isPage = false, category = null, onCategoryChange = null }) {
@@ -184,7 +184,7 @@ export function Projects({ isPage = false, category = null, onCategoryChange = n
               )}>
                 {/* Ambient glow */}
                 <div className={cn(
-                  "absolute -top-16 -right-16 h-40 w-40 rounded-full blur-[70px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none",
+                  "absolute -top-16 -right-16 h-40 w-40 rounded-full blur-[70px] opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 pointer-events-none",
                   categoryGlowClass[cat]
                 )} />
 
@@ -201,7 +201,7 @@ export function Projects({ isPage = false, category = null, onCategoryChange = n
                 />
 
                 {/* Upper half: project image */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted/60 flex items-center justify-center group-hover:bg-primary/5 transition-colors">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted/60 flex items-center justify-center group-hover:bg-primary/5 group-active:bg-primary/5 transition-colors">
                   {projectImage(project)}
                   {project.featured && (
                     <div className="absolute top-4 right-4 z-10">
@@ -209,7 +209,7 @@ export function Projects({ isPage = false, category = null, onCategoryChange = n
                     </div>
                   )}
                   <div className={cn(
-                    "absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none",
+                    "absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 pointer-events-none",
                     categoryGradientClass[cat]
                   )} />
                 </div>
@@ -224,7 +224,7 @@ export function Projects({ isPage = false, category = null, onCategoryChange = n
                     className="flex items-start justify-between gap-2"
                   >
                     <div className="flex items-center gap-2.5">
-                      <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:rotate-[-8deg] group-hover:scale-110", categoryIconClass[cat])}>
+                      <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:rotate-[-8deg] group-hover:scale-110 group-active:rotate-[-8deg] group-active:scale-110", categoryIconClass[cat])}>
                         <CategoryIcon className="h-4 w-4" />
                       </span>
                       <Badge variant="outline" className={cn("px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest", categoryBadgeClass[cat])}>
@@ -239,7 +239,7 @@ export function Projects({ isPage = false, category = null, onCategoryChange = n
                     transition={{ duration: 0.4, delay: (index % 4) * 0.1 + 0.25 }}
                     viewport={{ once: true }}
                   >
-                    <CardTitle className="font-bold text-lg font-serif leading-tight line-clamp-1 group-hover:text-primary transition-colors duration-300">
+                    <CardTitle className="font-bold text-lg font-serif leading-tight line-clamp-1 group-hover:text-primary group-active:text-primary transition-colors duration-300">
                       {project.name}
                     </CardTitle>
                   </motion.div>

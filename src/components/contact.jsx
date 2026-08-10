@@ -104,7 +104,7 @@ export function Contact() {
                      {/* Contact tiles */}
                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="flex items-center gap-3 p-4 rounded-lg bg-card/50 border border-border hover:border-primary/50 hover:shadow-[0_0_15px_rgba(229,9,20,0.1)] transition-all duration-300 group">
-                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-active:scale-110 transition-transform">
                               <Mail className="h-5 w-5" />
                            </div>
                            <div className="min-w-0">
@@ -114,7 +114,7 @@ export function Contact() {
                         </div>
 
                         <div className="flex items-center gap-3 p-4 rounded-lg bg-card/50 border border-border hover:border-primary/50 hover:shadow-[0_0_15px_rgba(229,9,20,0.1)] transition-all duration-300 group">
-                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-active:scale-110 transition-transform">
                               <Phone className="h-5 w-5" />
                            </div>
                            <div className="min-w-0">
@@ -124,7 +124,7 @@ export function Contact() {
                         </div>
 
                         <div className="flex items-center gap-3 p-4 rounded-lg bg-card/50 border border-border hover:border-primary/50 hover:shadow-[0_0_15px_rgba(229,9,20,0.1)] transition-all duration-300 group">
-                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-active:scale-110 transition-transform">
                               <MessageSquare className="h-5 w-5" />
                            </div>
                            <div className="min-w-0">
@@ -134,7 +134,7 @@ export function Contact() {
                         </div>
 
                         <div className="flex items-center gap-3 p-4 rounded-lg bg-card/50 border border-border hover:border-primary/50 hover:shadow-[0_0_15px_rgba(229,9,20,0.1)] transition-all duration-300 group">
-                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                           <div className="h-10 w-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-active:scale-110 transition-transform">
                               <Clock className="h-5 w-5" />
                            </div>
                            <div className="min-w-0">
