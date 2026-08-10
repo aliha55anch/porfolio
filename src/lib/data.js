@@ -11,7 +11,7 @@ export const Mydata = {
     Portfolio: "https://alicodexcel.netlify.app"
   },
   Summary:
-    "I build responsive websites and full stack web applications using MongoDB, Express.js, React.js, and Node.js. I focus on clean code, practical solutions, and reliable web experiences for businesses and individuals.",
+    "I build responsive websites and full stack web applications using MERN. I focus on clean code, practical solutions, and reliable web experiences for businesses and individuals.",
   Education: {
     Degree: "Bachelor of Science in Computer Science",
     Period: "Feb 2025 – Jan 2029",

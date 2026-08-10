@@ -57,9 +57,8 @@ export function Hero() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="flex flex-col gap-6 lg:pl-12"
+            className="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left order-1 lg:order-1 lg:col-start-1 lg:row-start-1 lg:pl-12"
           >
-
 
             <motion.h1 variants={item} className="font-serif font-bold tracking-tight text-foreground">
               <span className="inline-block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
@@ -67,7 +66,7 @@ export function Hero() {
                 Hi, I&apos;m
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-500 dark:from-red-500 dark:to-red-700 text-4xl sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-500 dark:from-red-500 dark:to-red-700 text-5xl sm:text-6xl md:text-7xl lg:text-7xl whitespace-nowrap">
                 M. Ali Hassan
               </span>
             </motion.h1>
@@ -78,30 +77,6 @@ export function Hero() {
                 <Typewriter phrases={heroRoles} typingSpeed={70} deletingSpeed={40} pause={1000} />{" "}
                 <span className="text-primary">/&gt;</span>
               </h2>
-              <p className="max-w-150 text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-                {profile.Summary}
-              </p>
-            </motion.div>
-
-            <motion.div variants={item} className="flex flex-col items-center gap-3 min-[400px]:flex-row min-[400px]:items-stretch min-[400px]:justify-center lg:justify-start">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold" asChild>
-                <Link to="/projects">View Projects <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-primary-foreground bg-transparent" asChild>
-                <a href={profile.ResumeUrl || "/assets/PDF/CV/muhammad-ali-hassan-cv.pdf"} download="Muhammad_Ali_Hassan_CV.pdf">Download CV <Download className="ml-2 h-4 w-4" /></a>
-              </Button>
-            </motion.div>
-
-            <motion.div variants={item} className="flex justify-center gap-4 text-muted-foreground lg:justify-start">
-              <a href={profile.Socials?.GitHub || "#"} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
-                <Github className="h-6 w-6" />
-              </a>
-              <a href={profile.Socials?.LinkedIn || "#"} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.Email)}`} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
-                <Mail className="h-6 w-6" />
-              </a>
             </motion.div>
           </motion.div>
 
@@ -110,9 +85,9 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex items-center justify-center pb-10 lg:pb-0"
+            className="flex items-center justify-center order-2 lg:order-2 lg:col-start-2 lg:row-start-1"
           >
-            <div className="relative group mb-6 lg:mb-0">
+            <div className="relative group">
               {/* Red glow behind the card */}
               <div className="absolute -inset-4 rounded-xl bg-red-600/10 blur-2xl group-hover:bg-red-600/20 transition-all duration-500" />
 
@@ -155,17 +130,50 @@ export function Hero() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Projects:</span>
-                        <span className="text-foreground">5+</span>
+                        <span className="text-foreground">4+</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-foreground">Stack:</span>
-                        <span className="text-foreground">MERN Stack</span>
+                        <span className="text-foreground">MERN</span>
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
+          </motion.div>
+
+          {/* Bottom Text Block: About, Buttons, Links */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left order-3 lg:order-3 lg:col-start-1 lg:row-start-2 lg:pl-12"
+          >
+            <motion.p variants={item} className="max-w-150 text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
+              {profile.Summary}
+            </motion.p>
+
+            <motion.div variants={item} className="flex flex-col items-center gap-3 min-[400px]:flex-row min-[400px]:items-stretch min-[400px]:justify-center lg:justify-start">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold" asChild>
+                <Link to="/projects">View Projects <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-primary-foreground bg-transparent" asChild>
+                <a href={profile.ResumeUrl || "/assets/PDF/CV/muhammad-ali-hassan-cv.pdf"} download="Muhammad_Ali_Hassan_CV.pdf">Download CV <Download className="ml-2 h-4 w-4" /></a>
+              </Button>
+            </motion.div>
+
+            <motion.div variants={item} className="flex justify-center gap-4 text-muted-foreground lg:justify-start">
+              <a href={profile.Socials?.GitHub || "#"} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+                <Github className="h-6 w-6" />
+              </a>
+              <a href={profile.Socials?.LinkedIn || "#"} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.Email)}`} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+                <Mail className="h-6 w-6" />
+              </a>
+            </motion.div>
           </motion.div>
 
         </div>
