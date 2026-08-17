@@ -60,15 +60,15 @@ export const Mydata = {
     },
     {
       id: 3,
-      Name: "Lost and Found",
-      Description: "University lost and found platform to report and claim lost items.",
+      Name: "StayHub",
+      Description: "Hotel booking platform where users can browse hotels, book rooms, and pay online.",
       Tech: ["React", "Node.js", "Express.js", "MongoDB"],
-      GitHub: "",
-      Live: "http://numl-lostandfound.vercel.app/",
+      GitHub: "https://github.com/aliha55anch/hotel-booking-managemnet",
+      Live: "http://stayhubhotel.vercel.app/",
       Featured: true,
       Year: "August 2026",
       Category: "fullstack",
-      images: ["/assets/images/projects/lost.png"]
+      images: ["/assets/images/projects/stayhub.png"]
     },
     {
       id: 4,
